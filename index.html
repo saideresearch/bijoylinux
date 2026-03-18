@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bijoy52 - Bijoy Bayanno for Linux & Windows</title>
+    <meta name="description" content="Official Bijoy Bayanno Unicode keyboard for Linux and Windows. Free downloads with installation guides.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        .download-card {
+            transition: all 0.2s ease;
+        }
+        .download-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            border-radius: 0.375rem;
+            padding: 0.75rem;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.875rem;
+            overflow-x: auto;
+        }
+        .code-block code {
+            display: block;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4 py-6 max-w-5xl">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-900">Bijoy52</h1>
+                    <p class="text-gray-600 mt-1">Bijoy Bayanno Unicode Keyboard</p>
+                </div>
+                <div class="text-sm text-gray-500">
+                    Version 3.0.1
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 max-w-5xl">
+        <!-- Intro -->
+        <div class="text-center mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">Download Bijoy Bayanno</h2>
+            <p class="text-gray-600">Free Unicode-compliant keyboard for Linux and Windows</p>
+        </div>
+
+        <!-- Download Cards -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Linux Card -->
+            <div class="download-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="px-6 py-5 bg-gray-50 border-b border-gray-200">
+                    <div class="flex items-center">
+                        <svg class="w-8 h-8 text-orange-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Linux</h3>
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Download Button -->
+                    <a href="Bijoy52.zip" 
+                       download
+                       class="block w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 px-4 rounded-lg text-center transition duration-200 mb-6">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                            Download bijoy52-linux.zip (53.2 MB)
+                        </span>
+                    </a>
+
+                    <!-- Distribution Tabs -->
+                    <div class="mb-4 border-b border-gray-200">
+                        <div class="flex space-x-4">
+                            <button onclick="showTab('arch')" id="tab-arch" class="py-2 text-sm font-medium text-orange-600 border-b-2 border-orange-600">Arch Linux</button>
+                            <button onclick="showTab('debian')" id="tab-debian" class="py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Debian/Ubuntu</button>
+                        </div>
+                    </div>
+
+                    <!-- Arch Linux Instructions -->
+                    <div id="linux-arch" class="tab-content">
+                        <div class="bg-gray-50 rounded-lg p-5">
+                            <h4 class="font-medium text-gray-800 mb-4 flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                Manual Configuration for Arch Linux
+                            </h4>
+                            
+                            <div class="space-y-6 text-sm">
+                                <!-- Step 1 -->
+                                <div>
+                                    <p class="font-medium text-gray-700 mb-2">Step 1: Install Prerequisites</p>
+                                    <div class="code-block">
+                                        <code>sudo pacman -S ibus-m17n m17n-db m17n-lib</code>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 2 -->
+                                <div>
+                                    <p class="font-medium text-gray-700 mb-2">Step 2: Get Configuration Files</p>
+                                    <div class="code-block">
+                                        <code>git clone https://github.com/saideresearch/bijoylinux.git<br>cd bijoyLinux</code>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 3 -->
+                                <div>
+                                    <p class="font-medium text-gray-700 mb-2">Step 3: Install Mapping Files</p>
+                                    <div class="code-block">
+                                        <code>sudo cp m17n.d/bn-bijoyUnicode.mim /usr/share/m17n/<br>sudo cp m17n.d/bn-bijoyClassic.mim /usr/share/m17n/</code>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 4 -->
+                                <div>
+                                    <p class="font-medium text-gray-700 mb-2">Step 4: Configure IBus</p>
+                                    <div class="space-y-2">
+                                        <div class="code-block">
+                                            <code>ibus restart</code>
+                                        </div>
+                                        <ul class="list-disc list-inside text-gray-600 ml-2 space-y-1">
+                                            <li>Open IBus Preferences: <span class="font-mono bg-gray-200 px-1.5 py-0.5 rounded">ibus-setup</span></li>
+                                            <li>Go to <span class="font-medium">Input Method</span> tab</li>
+                                            <li>Click <span class="font-medium">Add</span> → select <span class="font-medium">Bengali - Bijoy Bayanno</span></li>
+                                            <li>Remove any other Bengali input methods</li>
+                                            <li>Set Bijoy Bayanno as default</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 5 -->
+                                <div>
+                                    <p class="font-medium text-gray-700 mb-2">Step 5: Test</p>
+                                    <p class="text-gray-600">Open any text editor and start typing with Bijoy Bayanno layout.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 pt-4 border-t border-gray-200 text-xs text-gray-500">
+                                Source: <a href="https://github.com/saideresearch/bijoylinux.git" class="text-orange-600 hover:underline" target="_blank">github.com/nazdridoy/bijoyLinux</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Debian/Ubuntu Instructions -->
+                    <div id="linux-debian" class="tab-content hidden">
+                        <div class="bg-gray-50 rounded-lg p-5">
+                            <h4 class="font-medium text-gray-800 mb-4 flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                Manual Configuration for Debian/Ubuntu
+                            </h4>
+                            
+                            <div class="space-y-6 text-sm">
+                                <!-- Step 1 -->
+                                <div>
+                                    <p class="font-medium text-gray-700 mb-2">Step 1: Install Prerequisites</p>
+                                    <div class="code-block">
+                                        <code>sudo apt update<br>sudo apt install ibus-m17n m17n-db m17n-lib</code>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 2 -->
+                                <div>
+                                    <p class="font-medium text-gray-700 mb-2">Step 2: Get Configuration Files</p>
+                                    <div class="code-block">
+                                        <code>https://github.com/saideresearch/bijoylinux.git<br>cd bijoyLinux</code>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 3 -->
+                                <div>
+                                    <p class="font-medium text-gray-700 mb-2">Step 3: Install Mapping Files</p>
+                                    <div class="code-block">
+                                        <code>sudo cp m17n.d/bn-bijoyUnicode.mim /usr/share/m17n/<br>sudo cp m17n.d/bn-bijoyClassic.mim /usr/share/m17n/</code>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 4 -->
+                                <div>
+                                    <p class="font-medium text-gray-700 mb-2">Step 4: Configure IBus</p>
+                                    <div class="space-y-2">
+                                        <div class="code-block">
+                                            <code>ibus restart</code>
+                                        </div>
+                                        <ul class="list-disc list-inside text-gray-600 ml-2 space-y-1">
+                                            <li>Open IBus Preferences: <span class="font-mono bg-gray-200 px-1.5 py-0.5 rounded">ibus-setup</span></li>
+                                            <li>Go to <span class="font-medium">Input Method</span> tab</li>
+                                            <li>Click <span class="font-medium">Add</span> → select <span class="font-medium">Bengali - Bijoy Bayanno</span></li>
+                                            <li>Remove any other Bengali input methods</li>
+                                            <li>Set Bijoy Bayanno as default</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 5 -->
+                                <div>
+                                    <p class="font-medium text-gray-700 mb-2">Step 5: Test</p>
+                                    <p class="text-gray-600">Open any text editor and start typing with Bijoy Bayanno layout.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 pt-4 border-t border-gray-200 text-xs text-gray-500">
+                                Source: <a href="https://github.com/saideresearch/bijoylinux.git" class="text-orange-600 hover:underline" target="_blank">github.com/nazdridoy/bijoyLinux</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Windows Card -->
+            <div class="download-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="px-6 py-5 bg-gray-50 border-b border-gray-200">
+                    <div class="flex items-center">
+                        <svg class="w-8 h-8 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M0 0h11.5v11.5H0V0zm12.5 0H24v11.5H12.5V0zM0 12.5h11.5V24H0V12.5zm12.5 0H24V24H12.5V12.5z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Windows</h3>
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Download Button -->
+                    <a href="Bijoy52.rar" 
+                       download
+                       class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg text-center transition duration-200 mb-6">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                            Download bijoy52-windows.zip (4.9 MB)
+                        </span>
+                    </a>
+
+                    <!-- Installation Instructions -->
+                    <div class="bg-gray-50 rounded-lg p-5">
+                        <h4 class="font-medium text-gray-800 mb-3 flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Installation Instructions
+                        </h4>
+                        
+                        <div class="space-y-4 text-sm">
+                            <div>
+                                <p class="font-medium text-gray-700 mb-2">1. Extract the zip file:</p>
+                                <ul class="list-disc list-inside text-gray-600">
+                                    <li>Right-click <span class="font-medium">bijoy52-windows.zip</span></li>
+                                    <li>Select <span class="font-medium">Extract All</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <p class="font-medium text-gray-700 mb-2">2. Run the installer:</p>
+                                <ul class="list-disc list-inside text-gray-600">
+                                    <li>Open the extracted folder</li>
+                                    <li>Right-click <span class="font-medium">setup.exe</span></li>
+                                    <li>Select <span class="font-medium">Run as Administrator</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <p class="font-medium text-gray-700 mb-2">3. Follow installation wizard:</p>
+                                <ul class="list-disc list-inside text-gray-600">
+                                    <li>Click <span class="font-medium">Next</span> → <span class="font-medium">Next</span> → <span class="font-medium">Install</span></li>
+                                    <li>Restart your computer when prompted</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <p class="font-medium text-gray-700 mb-2">4. Activate Bijoy Bayanno:</p>
+                                <p class="text-gray-600">Press <kbd class="bg-gray-200 px-2 py-0.5 rounded font-mono">Ctrl</kbd> + <kbd class="bg-gray-200 px-2 py-0.5 rounded font-mono">Shift</kbd> + <kbd class="bg-gray-200 px-2 py-0.5 rounded font-mono">B</kbd></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-8 border-t border-gray-200">
+            <div class="text-center text-sm text-gray-500">
+                <p class="mb-2">Bijoy is a trademark of Ananda Computers. This site provides the official installer.</p>
+                <p>bijoy52.offsecplatform.com • Free download • No ads • No tracking</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Download Modal -->
+    <div id="downloadModal" class="fixed inset-0 bg-black bg-opacity-30 hidden items-center justify-center p-4" style="display: none;">
+        <div class="bg-white rounded-lg max-w-sm w-full p-6">
+            <div class="flex items-center mb-4">
+                <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <h3 class="text-lg font-semibold text-gray-800">Download Started</h3>
+            </div>
+            <p class="text-gray-600 mb-4" id="modalMessage">Your download will begin automatically.</p>
+            <button onclick="hideModal()" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded transition">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching for Linux distributions
+        function showTab(distribution) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            
+            // Show selected tab
+            document.getElementById(`linux-${distribution}`).classList.remove('hidden');
+            
+            // Update tab button styles
+            const tabs = ['arch', 'debian'];
+            tabs.forEach(dist => {
+                const btn = document.getElementById(`tab-${dist}`);
+                if (dist === distribution) {
+                    btn.classList.add('text-orange-600', 'border-orange-600');
+                    btn.classList.remove('text-gray-500', 'border-transparent');
+                } else {
+                    btn.classList.remove('text-orange-600', 'border-orange-600');
+                    btn.classList.add('text-gray-500', 'border-transparent');
+                }
+            });
+        }
+
+        // Show modal when download starts
+        document.querySelectorAll('a[download]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const os = this.href.includes('windows') ? 'Windows' : 'Linux';
+                showModal(`bijoy52-${os.toLowerCase()}.zip`);
+            });
+        });
+
+        function showModal(filename) {
+            document.getElementById('modalMessage').textContent = `${filename} download started.`;
+            document.getElementById('downloadModal').style.display = 'flex';
+            
+            // Auto-hide after 3 seconds
+            setTimeout(hideModal, 3000);
+        }
+
+        function hideModal() {
+            document.getElementById('downloadModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('downloadModal');
+            if (event.target === modal) {
+                hideModal();
+            }
+        }
+    </script>
+</body>
+</html>
